@@ -1,2 +1,13 @@
-﻿  main.cpp
-  FirstProject.vcxproj -> E:\Documents\C++Project\OpenGLProject\FirstProject\FirstProject\x64\Debug\FirstProject.exe
+﻿  glad.c
+  main.cpp
+E:\Documents\C++Project\LearningOpenGL\OpenGLProject\FirstProject\FirstProject\FirstProject\main.cpp(218,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\Documents\C++Project\LearningOpenGL\OpenGLProject\FirstProject\FirstProject\FirstProject\main.cpp(224,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\Documents\C++Project\LearningOpenGL\OpenGLProject\FirstProject\FirstProject\FirstProject\main.cpp(224,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\Documents\C++Project\LearningOpenGL\OpenGLProject\FirstProject\FirstProject\FirstProject\main.cpp(224,16): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  shader.cpp
+  stbLoader.cpp
+  utils.cpp
+E:\Documents\C++Project\LearningOpenGL\OpenGLProject\FirstProject\FirstProject\FirstProject\utils.cpp(18,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  FirstProject.vcxproj -> E:\Documents\C++Project\LearningOpenGL\OpenGLProject\FirstProject\FirstProject\x64\Debug\FirstProject.exe

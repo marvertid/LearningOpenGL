@@ -71,7 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LibraryPath>E:\Documents\C++Project\OpenGLProject\Libraries;E:\Documents\C++Project\OpenGLProject\Libraries\KHR;E:\Documents\C++Project\OpenGLProject\Libraries\glad;$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\FirstProject\..\..\..\Libraries;..\FirstProject\..\..\..\Libraries\glad;..\FirstProject\..\..\..\Libraries\glm;..\FirstProject\..\..\..\Libraries\KHR;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\..\Libraries;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -134,10 +135,19 @@
   <ItemGroup>
     <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="shader.cpp" />
+    <ClCompile Include="stbLoader.cpp" />
     <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\Download\stb_image.h" />
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="shader.h" />
     <ClInclude Include="utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fragmentShader.fs" />
+    <None Include="vertexShader.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

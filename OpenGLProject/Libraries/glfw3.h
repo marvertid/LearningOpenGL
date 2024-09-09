@@ -1847,6 +1847,7 @@ typedef void (* GLFWcursorposfun)(GLFWwindow* window, double xpos, double ypos);
  *
  *  @ingroup input
  */
+
 typedef void (* GLFWcursorenterfun)(GLFWwindow* window, int entered);
 
 /*! @brief The function pointer type for scroll callbacks.
