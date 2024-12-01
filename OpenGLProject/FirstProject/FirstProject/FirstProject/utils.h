@@ -11,7 +11,7 @@
 #include "camera.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void processInput(GLFWwindow* window);
 void processMovement(GLFWwindow* window, Camera& camera, const float& deltaTime);
 void changeColor(unsigned int shaderProgram);
+void fpsCounter(int &nbFrames, double &lastTime);
 #endif

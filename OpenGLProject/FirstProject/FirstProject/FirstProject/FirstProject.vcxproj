@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LibraryPath>..\FirstProject\..\..\..\Libraries;..\FirstProject\..\..\..\Libraries\glad;..\FirstProject\..\..\..\Libraries\glm;..\FirstProject\..\..\..\Libraries\KHR;$(LibraryPath)</LibraryPath>
+    <LibraryPath>E:\Documents\C++Project\GitHub\marvertid\LearningOpenGL\OpenGLProject\Libraries\Assimp;..\FirstProject\..\..\..\Libraries;..\FirstProject\..\..\..\Libraries\glad;..\FirstProject\..\..\..\Libraries\glm;..\FirstProject\..\..\..\Libraries\KHR;$(LibraryPath)</LibraryPath>
     <IncludePath>..\..\..\Libraries;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -135,6 +135,8 @@
   <ItemGroup>
     <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mesh.cpp" />
+    <ClCompile Include="model.cpp" />
     <ClCompile Include="shader.cpp" />
     <ClCompile Include="stbLoader.cpp" />
     <ClCompile Include="utils.cpp" />
@@ -142,6 +144,8 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\..\Download\stb_image.h" />
     <ClInclude Include="camera.h" />
+    <ClInclude Include="mesh.h" />
+    <ClInclude Include="model.h" />
     <ClInclude Include="shader.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>

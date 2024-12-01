@@ -5,14 +5,6 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
 	glViewport(0, 0, width, height); //aggiusta il viewport con quello desiderato
 }
 
-void processInput(GLFWwindow* window) {
-
-	//if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
-	//	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
-	//	glfwSetCursorPosCallback(window, NULL);
-	//}
-
-}
 
 void changeColor(unsigned int shaderProgram) {
 	float timeValue = glfwGetTime();
@@ -33,4 +25,14 @@ void processMovement(GLFWwindow* window, Camera& camera, const float& deltaTime)
 		camera.ProcessKeyboard(RIGHT, deltaTime);
 }
 
-
+void fpsCounter(int &nbFrames, double &lastTime) {
+	double currentTime = glfwGetTime();
+	nbFrames++;
+	if (currentTime - lastTime >= 1.0) { // If last prinf() was more than 1 sec ago
+		// printf and reset timer
+		printf("%f ms/frame\n", 1000.0 / double(nbFrames));
+		cout << 1000 / (1000.0 / double(nbFrames)) << endl;
+		nbFrames = 0;
+		lastTime += 1.0;
+	}
+}

@@ -211,7 +211,8 @@ int main() {
 	glfwSetMouseButtonCallback(window, mouseButton_callback);
 	glfwSetKeyCallback(window, key_callback);
 	
-	
+	double lastTime = glfwGetTime();
+	int nbFrames = 0;
 
 	while (!glfwWindowShouldClose(window)) { //while loop che si ripete in continuazione durante l'esecuzione della finestra
 
@@ -219,7 +220,6 @@ int main() {
 		deltaTime = currentFrame - lastFrame;
 		lastFrame = currentFrame;
 
-		processInput(window);
 		processMovement(window, camera, deltaTime);
 		glClearColor(0.08, 0.6, 0.34, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -228,7 +228,6 @@ int main() {
 		glBindTexture(GL_TEXTURE_2D, texture1);
 
 		glBindVertexArray(VAO);
-		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		for (unsigned int i = 0; i < 10; i++)
 		{
@@ -244,6 +243,10 @@ int main() {
 			shader.setMat4("model", model);
 			glDrawArrays(GL_TRIANGLES, 0, 36);
 		}
+
+		fpsCounter(nbFrames, lastTime);
+		
+
 		projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 		shader.setMat4("projection", projection);
 		
